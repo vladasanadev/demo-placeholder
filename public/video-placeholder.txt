@@ -1,0 +1,14 @@
+ADD YOUR VIDEO FILE HERE
+
+To make the video background work:
+
+1. Add your video file to this public folder
+2. Name it "sample-video.mp4" (or update the path in src/App.js)
+3. For best results, use MP4 format under 50MB
+
+Free video sources:
+- Pexels: https://www.pexels.com/videos/
+- Pixabay: https://pixabay.com/videos/
+- Videvo: https://www.videvo.net/
+
+The website will still work without a video, but you'll see a black background instead. 
