@@ -10,6 +10,7 @@ export function isAvailable(bookings, requested) {
   return !bookings.some((booking) => {
     if (booking.roomId !== requested.roomId) return false;
     const existingStart = Date.parse(booking.start);
-    return existingStart >= start && existingStart < end;
+    const existingEnd = Date.parse(booking.end);
+    return existingStart < end && existingEnd > start;
   });
 }
