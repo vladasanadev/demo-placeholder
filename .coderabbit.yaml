@@ -1,0 +1,12 @@
+# Review only the isolated creator demonstration, not the existing website.
+language: en-US
+reviews:
+  profile: chill
+  high_level_summary: true
+  review_status: true
+  path_filters:
+    - examples/booking/**
+    - .github/workflows/booking-tests.yml
+  auto_review:
+    enabled: true
+    drafts: false
