@@ -24,3 +24,10 @@ test('allows the same time in a different room', () => {
 test('rejects invalid or reversed booking times', () => {
   assert.throws(() => isAvailable([], booking('a', '11:00', '10:00')), RangeError);
 });
+
+test('rejects a booking fully contained inside an existing booking', () => {
+  assert.throws(() => reserve([booking('a', '10:00', '12:00')], booking('b', '10:30', '11:00')), /already booked/);
+});
+test('rejects an overlap when the existing booking starts earlier', () => {
+  assert.equal(isAvailable([booking('a', '10:00', '11:00')], booking('b', '10:30', '11:30')), false);
+});
